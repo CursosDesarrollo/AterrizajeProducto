@@ -1,0 +1,363 @@
+#fcc_test_suite_wrapper {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ColorFont1 : #172026;
+  --ColorFont2 : white;
+  --ColorButton : #5FCDD9;
+  --FondoSections : #172026;
+  --FondoNav : #027373;
+}
+
+a,input{
+  all: unset;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+}
+
+.HeaderVideo {
+  display: none;
+}
+
+header {
+  background-image: url("./img/FondoHeader.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 15px;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+.ContainerNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 4;
+}
+
+#FunctionMenu:checked~.ContainerNav{
+  background-color: var(--FondoNav);
+}
+
+.ContainerImg {
+  flex-grow: 1;
+  padding: 10px 0 10px 10px;
+  border-radius: 0 0 20px 0;
+}
+
+#FunctionMenu:checked~.ContainerNav .ContainerImg{
+  background-color: var(--FondoSections);
+}
+
+#header-img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: -3px 3px 5px 0px rgba(255, 255, 255, 0.75);
+}
+
+.ContainerLabel {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+#FunctionMenu:checked~.ContainerNav .ContainerLabel{
+  background-color: var(--FondoSections);
+}
+
+.ButtonMenu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#FunctionMenu:checked~.ContainerNav .ContainerLabel::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 5px 0 0 0;
+  border-radius: 20px 0 0 0;
+  background-color: var(--FondoNav);
+}
+
+#close {
+  position: relative;
+  z-index: 2;
+}
+
+#open path,#close path{
+  fill: white;
+}
+
+#close,#FunctionMenu:checked~.ContainerNav .ContainerLabel #open {
+  display: none;
+}
+
+#FunctionMenu:checked~.ContainerNav .ContainerLabel #close {
+  display: initial;
+}
+
+#FunctionMenu:checked~.ContainerNav nav {
+  display: flex;
+}
+
+nav {
+  color: white;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background-color: var(--FondoSections);
+  flex-direction: column;
+  padding: 8px 15px 15px;
+  z-index: 1;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-color: var(--FondoNav);
+  border-radius: 20px 0 0 0;
+}
+
+nav>*{
+  position: relative;
+  z-index: 3;
+}
+
+nav h2{
+  align-self: center;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+nav ul {
+  border-top: 2px solid rgba(255, 255, 255, 0.308);
+  padding-top: 15px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: start;
+  gap: 10px;
+  width: 100%;
+  max-width: 660px;
+  align-self: center;
+}
+
+nav li {
+  width: 100%;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+nav a h3 {
+  font-weight: 600;
+  color: var(--ColorFont1);
+  font-size: 1rem;
+}
+
+nav a img{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  margin: 5px;
+}
+
+nav a div{
+  position: relative;
+}
+
+nav a div::after{
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #1720264a;
+}
+
+.FalseNav {
+  height: 100px;
+}
+
+.HeaderContact {
+  padding: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+  position: relative;
+  z-index: 3;
+  max-width: 500px;
+  margin: auto;
+}
+
+.HeaderContact h1{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7rem;
+  width: 70%;
+  max-width: 325px;
+}
+
+.HeaderContact form {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  gap: 5px 15px;
+}
+
+.HeaderContact form input[type="email"]{
+  font-size: 1.1rem;
+  color: var(--ColorFont1);
+  padding: 8px 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.78) 0px 3px 8px;
+}
+
+.HeaderContact form input[type="email"]:focus-within{
+  background-color: rgba(255, 255, 255, 0.815);
+}
+
+.HeaderContact form input[type="submit"]{
+  color: var(--ColorFont1);
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  background-color: var(--ColorButton);
+  cursor: pointer;
+}
+
+.HeaderContact form p{
+  font-size: 0.7rem;
+  grid-column: 1/3;
+}
+
+@media (min-width: 829px) {
+  .ContainerNav {
+    align-items: center;
+  }
+  #FunctionMenu:checked~.ContainerNav {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .ContainerLabel {
+    display: none;
+  }
+  .ContainerImg {
+    flex-grow: 0;
+    padding: 15px;
+  }
+  #header-img {
+    width: 130px;
+  }
+  #FunctionMenu:checked~.ContainerNav .ContainerImg {
+    background-color: transparent;
+  }
+  #FunctionMenu:checked~.ContainerNav nav {
+    display: initial;
+  }
+  nav {
+    flex-grow: 1;
+    display: initial;
+    position: relative;
+    top: initial;
+    right: initial;
+    left: initial;
+    background-color: transparent;
+    flex-direction: initial;
+    padding: 15px;
+    z-index: 1;
+  }
+  nav::before {
+    display: none;
+  }
+  nav h2{
+    display: none;
+  }
+  nav ul {
+    border-top: none;
+    padding-top: initial;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    grid-template-columns: initial;
+    place-items: initial;
+    gap: 10px;
+    max-width: none;
+    align-self: initial;
+  }
+  nav li {
+    max-width: 157px;
+  }
+  nav a {
+    padding: 0 10px;
+    height: 58px;
+  }
+  .HeaderContact {
+    padding: 10px;
+    display: grid;
+    flex-direction: initial;
+    gap: 15px;
+    max-width: none;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    max-width: 959px;
+  }
+  .HeaderContact>h1 {
+    font-size: 2rem;
+    width: 100%;
+    max-width: 331px;
+  }
+  .HeaderContact>form {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .HeaderVideo {
+    width: 460px;
+    height: 263px;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    display: initial;
+  }
+  .MainVideo {
+    display: none;
+  }
+}

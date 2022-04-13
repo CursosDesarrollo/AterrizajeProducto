@@ -1,0 +1,367 @@
+:root {
+  --ColorScrool1 : rgba(255, 255, 255, 0.856);
+  --ColorScrool2 : rgba(0, 0, 0, 0.671);
+  --FondoArticles1 : #172026;
+  --FondoArticles2 : white;
+  --BorderH31 : #172026b4;
+  --BorderH32 : rgba(255, 255, 255, 0.637);
+}
+
+section:nth-of-type(2n+1) {
+  color: var(--ColorFont2);
+  background-color: var(--FondoSections);
+}
+
+.ContainerVideo {
+  width: 90%;
+  max-width: 560px;
+  margin: 20px auto;
+}
+
+.MainVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.MainVideo iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main>section {
+  padding: 20px 0;
+}
+
+main>section>div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+main>section>div>h2 {
+  align-self: center;
+  font-size: 1.9rem;
+}
+
+.InfoCanales div{
+  max-width: 550px;
+  margin: auto;
+}
+
+.InfoCanales div article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.InfoCanales div article h3{
+  align-self: flex-start;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.InfoCanales div article h3::before{
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0 -15px -3px 15px;
+  border-bottom: 2px solid var(--BorderH32);
+}
+
+.InfoCanales div article p{
+  text-align: justify;
+}
+
+.DispositivosMitv>div{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+.ContainerArticles{
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 10px;
+  max-width: max-content;
+}
+
+.ContainerArticles:hover::-webkit-scrollbar {
+  display: initial;             
+}
+
+.ContainerArticles::-webkit-scrollbar {
+  display: none;
+  height: 6px;              
+}
+
+.ContainerArticles::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.445);
+  border-radius: 20px;       
+}
+
+.ContainerArticles::-webkit-scrollbar-thumb {   
+  border-radius: 20px; 
+}
+
+.DispositivosMitv .ContainerArticles::-webkit-scrollbar-thumb {
+  background-color: var(--ColorScrool2); 
+}
+
+.DispositivosMitv .ContainerArticles article{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 25px;
+  border-radius: 20px;
+  background-color: var(--FondoArticles1);
+  box-shadow: -3px 3px 10px 0px rgba(0,0,0,0.75);
+}
+
+.ContainerImgDispositivo{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.DispositivosMitv .ContainerArticles img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.DispositivosMitv .ContainerArticles article a{
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 5px;
+  background-color: var(--ColorButton);
+  border-radius: 5px;
+  color: var(--ColorFont1);
+  cursor: pointer;
+}
+
+.DispositivosMitv .ContainerArticles .PlusIcon svg{
+  width: 10px;
+  height: 10px;
+}
+
+.Planes .ContainerArticles article{
+  color: var(--ColorFont1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: var(--FondoArticles2);
+  border-radius: 10px;
+}
+
+.Planes .ContainerArticles::-webkit-scrollbar-thumb {
+  background-color: var(--ColorScrool1); 
+}
+
+.Planes .ContainerArticles article h3 {
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.Planes .ContainerArticles article h3::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0 -20px -5px;
+  border-bottom: 2px solid var(--BorderH31);
+}
+
+.Planes .ContainerArticles article h3,.Planes .ContainerArticles article a{
+  align-self: center;
+}
+
+.Planes .ContainerArticles article a{
+  background-color: var(--ColorButton);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--ColorFont1);
+  cursor: pointer;
+}
+
+.Planes .ContentPlan{
+  padding: 15px;
+  border-bottom: 2px solid var(--BorderH31);
+}
+
+.Planes .ContentPlan p{
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.Planes .ContainerArticles img{
+  border-radius: 10px;
+  width: 170px;
+  height: auto;
+  box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+}
+
+footer {
+  padding: 20px 10px 30px;
+}
+
+footer>div{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 709px;
+  margin: auto;
+}
+
+.FraseFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.FraseFooter h3 {
+  align-self: flex-start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+
+.FraseFooter h3::before{
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0 -15px -3px 15px;
+  border-bottom: 2px solid var(--BorderH31);
+}
+
+.FraseFooter p {
+  text-align: justify;
+}
+
+.ContactoFooter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+footer img{
+  width: 70px;
+  height: auto;
+}
+
+@media (min-width: 681px) {
+  .DispositivosMitv .ContainerArticles{
+    margin: auto;
+  }
+}
+
+@media (min-width: 829px) {
+  :root {
+    --FondoArticles1 : white;
+    --FondoArticles2 : #172026;
+    --ColorScrool1 : rgba(0, 0, 0, 0.671);
+    --ColorScrool2 : rgba(255, 255, 255, 0.856);
+    --BorderH31 : rgba(255, 255, 255, 0.637);
+    --BorderH32 : #172026b4;
+  }
+  section:nth-of-type(2n+1) {
+    color: var(--ColorFont1);
+    background-color: transparent;
+  }
+  section:nth-of-type(2n+2) {
+    color: var(--ColorFont2);
+    background-color: var(--FondoSections);
+  }
+  main>section>div>h2 {
+    font-size: 2.1rem;
+  }
+  .InfoCanales div {
+    display: grid;
+    flex-direction: initial;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 938px;
+    margin: auto;
+  }
+  .InfoCanales div h2 {
+    align-self: initial;
+    justify-self: center;
+    grid-column: 1/3;
+  }
+  .DispositivosMitv .ContainerArticles{
+    justify-content: space-around;
+    max-width: initial;
+    margin: initial;
+  }
+  .DispositivosMitv .ContainerArticles img {
+    width: 200px;
+  }
+  .Planes .ContainerArticles article{ 
+    color: var(--ColorFont2);
+  }
+  footer {
+    color: white;
+    background-color: var(--FondoSections);
+  }
+}
+
+@media (min-width: 1080px) {
+  .Planes .ContainerArticles{
+    justify-content: space-around;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width: 1200px) { 
+  .InfoCanales div {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    max-width: 1186px;
+  }
+  .InfoCanales div h2 {
+    grid-column: 1/4;
+  }
+  .DispositivosMitv .ContainerArticles img {
+    width: 250px;
+  }
+  .Planes .ContainerArticles article h3 {
+    font-size: 1.9rem;
+  }
+  .Planes .ContentPlan{
+    padding: 20px;
+  }
+  .Planes .ContentPlan p{
+    font-size: 1.9rem;
+  }
+  .Planes .ContainerArticles img{
+    width: 185px;
+  }
+  footer>div{
+    display: flex;
+    flex-direction: row;
+    gap: initial;
+    max-width: initial;
+    margin: initial;
+    justify-content: space-around;
+    padding: 15px 0;
+  }
+  .FraseFooter {
+    max-width: 600px;
+  }
+}
